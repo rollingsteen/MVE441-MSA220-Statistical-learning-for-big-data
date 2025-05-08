@@ -59,11 +59,6 @@ data<-catdogdata
 data <- as.data.frame(scale(data))
 labels<-Labels
 
-nzv <- nearZeroVar(data)
-if (length(nzv) > 0) {
-  data <- data[, -nzv]
-  cat(length(nzv), "near-zero variance features removed.\n")
-}
 
 n_sig <- c()
 test_error <- c()
